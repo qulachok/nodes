@@ -118,9 +118,9 @@ else
     echo "User $username was successfully created."
 fi
 
-SSH_USER_PATH="/home/$username/.ssh"
-execute_script "$HOME/add-ssh-keys.sh"
+download "https://raw.githubusercontent.com/qulachok/nodes/refs/heads/main/cdn/scripts/user-setup.sh" "/home/$username/setup.sh"
 
+chmod +x "/home/$username/setup.sh"
 if [[ $? -ne 0 ]]; then
   echo "Failed to make setup.sh executable"
   exit 1

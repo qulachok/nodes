@@ -1,7 +1,7 @@
 #!/bin/bash
 
-ssh_path=${SSH_USER_PATH:-"$HOME/.ssh"}
-public_key=${SSH_PUBLIC_KEY}
+ssh_path="$HOME/.ssh"
+public_key="$SSH_PUBLIC_KEY"
 
 # Check if authorized_keys file exists
 if [ ! -f "$ssh_path/authorized_keys" ]; then
