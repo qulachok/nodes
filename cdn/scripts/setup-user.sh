@@ -3,6 +3,9 @@
 # Import common functions
 . <(wget -qO- https://raw.githubusercontent.com/qulachok/nodes/refs/heads/main/cdn/scripts/common.sh)
 
+# Install environment
+. <(wget -qO- https://raw.githubusercontent.com/qulachok/nodes/refs/heads/main/cdn/scripts/environment.sh)
+
 # Install SSH setup
 download_and_execute "https://raw.githubusercontent.com/qulachok/nodes/refs/heads/main/cdn/scripts/add-ssh-keys.sh" "$HOME/add-ssh-keys.sh"
 if [[ $? -ne 0 ]]; then

@@ -67,7 +67,7 @@ else
     echo "User $username was successfully created."
 fi
 
-download "https://raw.githubusercontent.com/qulachok/nodes/refs/heads/main/cdn/scripts/user-setup.sh" "/home/$username/setup.sh"
+download "https://raw.githubusercontent.com/qulachok/nodes/refs/heads/main/cdn/scripts/setup-user.sh" "/home/$username/setup.sh"
 
 chmod +x "/home/$username/setup.sh"
 if [[ $? -ne 0 ]]; then
@@ -76,3 +76,10 @@ if [[ $? -ne 0 ]]; then
 fi
 
 echo "Script completed successfully."
+
+echo "Please run the following command to switch to the new user:"
+echo "<---->"
+echo "su - $username"
+echo "<---->"
+echo "bash ~/setup.sh"
+echo "<---->"
